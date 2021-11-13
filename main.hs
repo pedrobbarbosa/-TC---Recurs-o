@@ -56,8 +56,12 @@ sumInterval_ :: Int -> Int -> Int
 sumInterval_ m n
  | n == 0 = 1
  | n == 1 = 1
- | n > m = n * sumInterval_ m (n-1)
+ | n >= m = n * sumInterval_ m (n-1)
 
 main = do
+  print(doubleFac 8)
+  print(doubleFac 5)
   print(sumInterval_ 1 5)
   print(sumInterval_ 1 7)
+  print(sumInterval_ 2 7)
+  print(sumInterval_ 5 7)
